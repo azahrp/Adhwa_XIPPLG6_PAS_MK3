@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title> <!--judul/nama game nya-->
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css"> <!--untuk masukin/manggil css nya-->
+</head>
+<body>
+
+  <div id="page">
+
+    <!-- Container untuk pesan selamat -->
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are done.</p>
+        <p id="moves"></p>
+        <!-- Tombol OK untuk menutup pesan -->
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="OK" />
+      </div>
+    </div>
+
+    <div>
+      <!-- Deskripsi game -->
+      <h3>Klee tersesat saat ingin pulang ke rumahnya, ayo bantu dia!</h3>
+    </div>
+
+    <!-- Menu untuk memilih tingkat kesulitan -->
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+          <!-- Pilihan tingkat kesulitan -->
+          <option value="10">Easy</option>
+          <option value="15">Medium</option>
+          <option value="25">Hard</option>
+          <option value="38">Extreme</option>                                      
+        </select>
+      </div>
+      <!-- Tombol untuk memulai permainan -->
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+    </div>
+
+    <!-- Tampilan permainan (maze) -->
+    <div id="view">
+      <div id="mazeContainer">
+        <!-- Area permainan menggunakan elemen canvas -->
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+
+    <!-- Instruksi untuk bermain -->
+    <h4 id="instructions">Seret kursor mu ke atas atau ke bawah untuk menuntun Klee!</h4>
+
+  </div>
+
+  <!-- Memuat library jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Memuat library jQuery Touch Swipe -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  
+  <!-- Memuat file script JavaScript -->
+  <script src="./script.js"></script>
+</body>
+</html>

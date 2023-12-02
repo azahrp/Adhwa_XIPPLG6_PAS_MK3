@@ -1,0 +1,185 @@
+/* Import font 'Poppins' dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Pengaturan umum untuk elemen HTML dan body */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(mondo3.jpg);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    
+}
+/* Gaya untuk heading level 3 */
+h3 {
+    color: rgb(255, 255, 255); /* Ganti dengan warna yang diinginkan */
+    text-shadow: 2px 2px 4px #000000;
+  }
+/* Gaya untuk heading level 4 */
+  h4 {
+    color: rgb(255, 255, 255); /* Ganti dengan warna yang diinginkan */
+    text-shadow: 2px 2px 4px #000000;
+  }
+/* Gaya untuk tombol dan select */
+  #diffSelect, #startMazeBtn {
+    color: #000000;
+    background-color: white; /* Change the background color as needed */
+    opacity: 60%;
+  }
+  
+  .custom-select select option:nth-child(1) {
+    background-color: #8dff8d;
+  }
+  
+  .custom-select select option:nth-child(2) {
+    background-color: #fdff8d;
+  }
+  
+  .custom-select select option:nth-child(3) {
+    background-color: rgb(255, 206, 146);
+  }
+  
+  .custom-select select option:nth-child(4) {
+    background-color: rgba(255, 112, 112, 0.933);
+  }
+
+  .custom-select select option:hover {
+    background-color: white;
+  }
+  
+  #view {
+    margin-top: 70px; /* Margin atas sebesar 70px pada elemen dengan id 'view' */
+}
+
+#mazeContainer {
+    top: 15px; /* Jarak 15px dari atas untuk elemen dengan id 'mazeContainer' */
+    opacity: 0; /* Opasitas elemen menjadi 0 (transparan) */
+    display: inline-block; /* Menampilkan elemen sebagai inline-block */
+    margin: auto; /* Margin otomatis untuk elemen 'mazeContainer' */
+    border-radius: 10px; /* Memberikan border radius sebesar 10px */
+}
+
+#mazeContainer #mazeCanvas {
+    margin: 0; /* Mengatur margin elemen 'mazeCanvas' menjadi 0 */
+    display: block; /* Menampilkan elemen sebagai block */
+    border: solid 2px rgb(255, 255, 255); /* Mengatur border solid dengan ketebalan 2px berwarna hitam */
+    height: 400px; /* Tinggi elemen 'mazeCanvas' sebesar 400px */
+}
+/* Gaya untuk input dan select */
+input, select {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.30);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+}
+/* Gaya saat hover pada input dan select */
+input:hover, select:hover {
+	background-color: rgba(0, 0, 0, 0.70); /* Mengubah warna latar belakang saat dihover menjadi lebih gelap */
+}
+/* Gaya saat aktif pada input dan select */
+input:active, select:active {
+	background-color: black; /* Mengubah warna latar belakang saat sedang aktif menjadi hitam */
+}
+/* Gaya saat fokus pada input dan select */
+input:focus, select:focus {
+	outline: none; /* Menghilangkan outline pada elemen saat fokus */
+}
+.custom-select {
+	display: inline-block; /* Menampilkan elemen sebagai inline-block */
+}
+/* Gaya untuk dropdown select */
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
+/* Pengaturan untuk container pesan */
+#Message-Container {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+/* Pengaturan ukuran dan posisi pesan */
+#Message-Container #message {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+/* Pengaturan untuk halaman */
+#page {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+/* Pengaturan untuk bagian menu */
+#page #menu {
+    margin: auto;
+    padding: 1px;
+    height: 65px;
+    box-sizing: border-box;
+}
+/* Pengaturan untuk judul menu */
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+/* Pengaturan untuk tampilan halaman */
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+/* Pengaturan border */
+.border {
+    border: 10px black solid;
+    border-radius: 10px;
+}
+/* Mengatur gaya intruksi */
+#instructions {
+    margin-top: 415px; /* Margin atas elemen sebesar 415px */
+}
+/* Media query untuk perangkat ekstra kecil */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	input, select {
+	    width: 120px;
+	}
+}
